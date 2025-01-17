@@ -6,7 +6,6 @@ let originalData = []
 const App = () => {
     const [mydata, setMyData] = useState([]);
 
-    //Add fetch() - Exercise 1A
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/albums")
             .then ((response)=>{
@@ -21,7 +20,6 @@ const App = () => {
             })
     }, []);
 
-    //Create the FilterData() function
     const FilterData = (text) => {
         if (text !== '') {
             let myFilteredData = originalData.filter((item) =>
